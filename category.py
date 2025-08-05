@@ -7,7 +7,6 @@ class Category:
     def add_recipe(self, recipe):
         if recipe not in self.__recipes:
             self.__recipes.append(recipe)
-            # Add the reverse link if Recipe supports it
             if hasattr(recipe, "add_category"):
                 recipe.add_category(self)
 
